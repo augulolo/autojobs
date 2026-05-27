@@ -15,6 +15,7 @@ SCRAPERS = [
     "scraper_honda",
     "scraper_vw",
     "scraper_scania",
+    "scraper_stellantis",
 ]
 
 

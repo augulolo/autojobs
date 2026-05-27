@@ -28,6 +28,7 @@ python scraper_ford.py
 python scraper_honda.py
 python scraper_vw.py
 python scraper_scania.py
+python scraper_stellantis.py
 python scoring.py
 
 # Abrir dashboard
@@ -51,6 +52,7 @@ días a las 08:00 ART y commitea el `.db` actualizado.
 | `scraper_honda.py` | Honda — HiringRoom (hondamotorargentina.hiringroom.com) |
 | `scraper_vw.py` | VW Group — SAP SuccessFactors (jobs.volkswagen-group.com) |
 | `scraper_scania.py` | Scania — SAP SuccessFactors (jobs.scania.com) |
+| `scraper_stellantis.py` | Stellantis — Empregare (stellantis.empregare.com) |
 | `scoring.py` | Clasifica area/seniority y calcula score 0-100 vs perfil |
 | `app.py` | Dashboard Streamlit con filtros, KPIs, gráficos y tabla |
 | `run_all.py` | Orquestador: corre todos los scrapers + scoring |
@@ -67,7 +69,7 @@ días a las 08:00 ART y commitea el `.db` actualizado.
 | Honda | HiringRoom | hondamotorargentina.hiringroom.com | ~20 |
 | VW Group | SAP SuccessFactors | jobs.volkswagen-group.com | ~180 |
 | Scania | SAP SuccessFactors | jobs.scania.com | ~713 |
-| Stellantis | Sin portal accesible | — | 0 (API sin jobs) |
+| Stellantis | Empregare | stellantis.empregare.com / buscar-novo | ~70 |
 | BMW | Sin ATS público | — | No scrapeable |
 | Mercedes-Benz | Sin ATS público | — | No scrapeable |
 | IVECO/CNH | Sin portal accesible | — | No scrapeable |
