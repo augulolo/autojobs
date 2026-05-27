@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/jobs.db
+          git add -f data/jobs.db
           # Solo commitea si hay cambios
           git diff --cached --quiet || git commit -m "chore: actualizar jobs.db ($(date -u +%Y-%m-%d))"
           git push

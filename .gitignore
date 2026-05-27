@@ -5,8 +5,8 @@ __pycache__/
 .venv/
 venv/
 
-# Data (regenerable)
-data/jobs.db
+# Data — jobs.db se commitea para que Streamlit Cloud lo sirva
+# data/jobs.db
 
 # IDE
 .idea/
