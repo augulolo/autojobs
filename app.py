@@ -436,9 +436,9 @@ with tab_matches:
             score = int(row["score"]) if pd.notna(row["score"]) else 0
             company = row.get("company", "")
             title = row.get("title", "")
-            country = row.get("country", "—")
-            area = row.get("area", "—") or "—"
-            seniority = row.get("seniority", "—") or "—"
+            country = row.get("country") if pd.notna(row.get("country")) else "—"
+            area = row.get("area") if pd.notna(row.get("area")) else "—"
+            seniority = row.get("seniority") if pd.notna(row.get("seniority")) else "—"
             url = row.get("url", "#")
             area_icon = AREA_ICONS.get(area, "📌") if area != "—" else "📌"
 
