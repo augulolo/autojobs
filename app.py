@@ -373,21 +373,26 @@ with tab_companies:
         careers_url = COMPANY_CAREERS.get(company, "#")
 
         with cols[idx % 4]:
-            logo_html = f'<img src="{logo_url}" alt="{company}">' if logo_url else ""
-            st.markdown(f"""
-            <div class="company-card">
-                {logo_html}
-                <div class="name">{company}</div>
-                <div class="stat">{n_jobs}</div>
-                <div class="label">vacantes activas</div>
-                <div style="margin-top:0.6rem; font-size:0.82rem; color:#ccc;">
-                    🌍 {n_countries} países · {top_area_icon} {top_area}<br>
-                    📈 Score prom: <b>{avg_score:.0f}</b>
-                </div>
-                <a href="{careers_url}" target="_blank">Ver portal de careers →</a>
-            </div>
-            """, unsafe_allow_html=True)
-            st.write("")  # spacer
+            if logo_url:
+                logo_html = f'<img src="{logo_url}" alt="{company}">'
+            else:
+                logo_html = f'<div style="height:40px;line-height:40px;font-size:1.5rem;color:#FF6B35;">🏭</div>'
+            score_str = f"{avg_score:.0f}" if pd.notna(avg_score) else "—"
+            st.markdown(
+                f'<div class="company-card">'
+                f'{logo_html}'
+                f'<div class="name">{company}</div>'
+                f'<div class="stat">{n_jobs}</div>'
+                f'<div class="label">vacantes activas</div>'
+                f'<div style="margin-top:0.6rem;font-size:0.82rem;color:#ccc;">'
+                f'🌍 {n_countries} países · {top_area_icon} {top_area}<br>'
+                f'📈 Score prom: <b>{score_str}</b>'
+                f'</div>'
+                f'<a href="{careers_url}" target="_blank">Ver portal de careers →</a>'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+            st.write("")
 
     # Tabla comparativa
     st.divider()
