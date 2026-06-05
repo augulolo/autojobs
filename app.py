@@ -19,14 +19,14 @@ st.set_page_config(
 
 # ── Logos por empresa (URLs públicas) ─────────────────────────────────────
 COMPANY_LOGOS: dict[str, str] = {
-    "Toyota": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Toyota.svg/200px-Toyota.svg.png",
-    "Renault": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Renault_2021_Text.svg/200px-Renault_2021_Text.svg.png",
-    "Nissan": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Nissan_2020_logo.svg/200px-Nissan_2020_logo.svg.png",
-    "Ford": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ford_Motor_Company_Logo.svg/200px-Ford_Motor_Company_Logo.svg.png",
-    "Honda": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Honda.svg/200px-Honda.svg.png",
-    "VW Group": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Volkswagen_logo_2019.svg/200px-Volkswagen_logo_2019.svg.png",
-    "Scania": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Scania_logo.svg/200px-Scania_logo.svg.png",
-    "Stellantis": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Stellantis_logo.svg/200px-Stellantis_logo.svg.png",
+    "Toyota": "https://cdn.simpleicons.org/toyota/FF6B35",
+    "Renault": "https://cdn.simpleicons.org/renault/FF6B35",
+    "Nissan": "https://cdn.simpleicons.org/nissan/FF6B35",
+    "Ford": "https://cdn.simpleicons.org/ford/FF6B35",
+    "Honda": "https://cdn.simpleicons.org/honda/FF6B35",
+    "VW Group": "https://cdn.simpleicons.org/volkswagen/FF6B35",
+    "Scania": "https://cdn.simpleicons.org/scania/FF6B35",
+    "Stellantis": "",  # no disponible en Simple Icons
 }
 
 COMPANY_CAREERS: dict[str, str] = {
@@ -107,8 +107,7 @@ st.markdown("""
         height: 40px;
         object-fit: contain;
         margin-bottom: 0.5rem;
-        filter: brightness(0) invert(1);
-    }
+            }
     .company-card .name {
         font-weight: 600;
         font-size: 1rem;
